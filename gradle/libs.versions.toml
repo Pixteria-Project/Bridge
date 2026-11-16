@@ -32,6 +32,6 @@ junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version = "5
 lightdream-filemanager = { module = "dev.lightdream:file-manager", version = "2.4.4" }
 
 [plugins]
-shadow = { id = "com.github.johnrengelman.shadow", version = "7.1.2" }
+shadow = { id = "com.gradleup.shadow", version = "9.2.2" }
 paperweight = { id = "io.papermc.paperweight.userdev", version = "1.5.2" }
 runpaper = { id = "xyz.jpenilla.run-paper", version = "2.0.1" }

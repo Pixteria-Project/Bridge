@@ -8,19 +8,9 @@ plugins {
 group 'net.pixteria.bridge'
 version '1.0-SNAPSHOT'
 
-def nexusUsername = project.hasProperty("exodus.username") ? file("secrets.gradle").exists() ? nexusUsername = nexusUsernameSecret : project.findProperty("exodus.username") as String : System.getenv("NEXUS_USERNAME")
-def nexusPassword = project.hasProperty("exodus.password") ? file("secrets.gradle").exists() ? nexusPassword = nexusPasswordSecret : project.findProperty("exodus.password") as String : System.getenv("NEXUS_PASSWORD")
-
 repositories {
     mavenLocal()
     mavenCentral()
-    maven {
-        url "https://nexus.potpvp.net/repository/pixteria-builds/"
-        credentials {
-            username nexusUsername
-            password nexusPassword
-        }
-    }
 }
 
 
@@ -49,13 +39,6 @@ tasks {
 
 publishing {
     repositories {
-//        maven {
-//            url "https://nexus.potpvp.net/repository/pixteria-builds/"
-//            credentials {
-//                username nexusUsername
-//                password nexusPassword
-//            }
-//        }
         mavenLocal()
     }
 
