@@ -49,13 +49,14 @@ tasks {
 
 publishing {
     repositories {
-        maven {
-            url "https://nexus.potpvp.net/repository/pixteria-builds/"
-            credentials {
-                username nexusUsername
-                password nexusPassword
-            }
-        }
+//        maven {
+//            url "https://nexus.potpvp.net/repository/pixteria-builds/"
+//            credentials {
+//                username nexusUsername
+//                password nexusPassword
+//            }
+//        }
+        mavenLocal()
     }
 
     publications {
